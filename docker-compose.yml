@@ -1,0 +1,9 @@
+version: '3'
+services:
+  composer:
+    image: composer:latest
+    environment:
+      - COMPOSER_CACHE_DIR=/app/storage/cache/composer
+    volumes:
+      - .:/app
+    restart: never
