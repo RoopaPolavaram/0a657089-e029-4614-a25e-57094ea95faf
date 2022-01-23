@@ -1,10 +1,12 @@
 <?php
-
-declare(strict_types = 1);
+namespace AppTests;
 
 use PHPUnit\Framework\TestCase;
-include 'LongestIncreasingSubsequence.php';
+use App\LongestIncreasingSubsequence;
 
+/**
+ * @covers LongestIncreasingSubsequence
+ */
 class LongestIncreasingSubsequenceTest extends TestCase {
 
     public function testArraySequence() : void {             
