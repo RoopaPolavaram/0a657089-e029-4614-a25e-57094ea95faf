@@ -2,10 +2,10 @@
 
 ## Getting Started
 
-### Dependencies
+### Prerequisites
 
-* docker
-* docker-compose
+* Linux Environment
+* Docker
 
 ### Installing
 
