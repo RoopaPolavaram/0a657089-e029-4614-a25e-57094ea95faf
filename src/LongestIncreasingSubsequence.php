@@ -22,9 +22,18 @@ class LongestIncreasingSubsequence {
                 $output[$row][] = $orderedArr[$i];
             }
         }
-        // find the subsequence with maximum length and convert it to space separated string, then return it        
-        $output = implode(" ", array_values(max($output)));
+        // find the maximum length of all available sub sequences
+        $maxLength = count(max(($output)));
 
-        return $output;        
+        // find all the subsequences with maximum length
+        $arraysWithMaxlength = array_filter($output, function($eachSubSeq) use ($maxLength) {
+            return count($eachSubSeq) === $maxLength;
+        });
+
+        // pick the first subsequence with max length
+        $output = array_values($arraysWithMaxlength)[0];
+
+        // convert result to space separated string, then return it        
+        return implode(" ", $output);
     }
 }
